@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { Inter, Playfair_Display } from 'next/font/google'
+import Providers from '@/components/Providers'
 import './globals.css'
 
 const inter = Inter({
@@ -15,6 +16,7 @@ const playfair = Playfair_Display({
 })
 
 export const metadata: Metadata = {
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? 'http://localhost:3000'),
   title: 'Keto by Olena | 30-Day Keto Reset',
   description:
     'Transform your life with the 30-Day Keto Reset PDF recipe book by Olena Marchenko. 80+ delicious keto recipes, a 4-week meal plan, and everything you need to reset your body.',
@@ -22,6 +24,11 @@ export const metadata: Metadata = {
     title: 'Keto by Olena | 30-Day Keto Reset',
     description: '80+ keto recipes. 4-week meal plan. Instant PDF download.',
     type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Keto by Olena | 30-Day Keto Reset',
+    description: '80+ keto recipes. 4-week meal plan. Instant PDF download.',
   },
 }
 
@@ -32,7 +39,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${inter.variable} ${playfair.variable}`}>
-      <body className="antialiased">{children}</body>
+      <body className="antialiased">
+        <Providers>{children}</Providers>
+      </body>
     </html>
   )
 }

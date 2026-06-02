@@ -3,6 +3,7 @@ import Hero from '@/components/sections/Hero'
 import About from '@/components/sections/About'
 import Book from '@/components/sections/Book'
 import Testimonials from '@/components/sections/Testimonials'
+import CTA from '@/components/sections/CTA'
 import FAQ from '@/components/sections/FAQ'
 import Footer from '@/components/sections/Footer'
 
@@ -15,6 +16,7 @@ export default function Home() {
         <About />
         <Book />
         <Testimonials />
+        <CTA />
         <FAQ />
       </main>
       <Footer />

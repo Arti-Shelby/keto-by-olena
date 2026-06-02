@@ -80,7 +80,7 @@ export default function Navbar() {
 
           <button
             onClick={() => setOpen(!open)}
-            className="md:hidden p-2 rounded-lg hover:bg-card transition-colors cursor-pointer"
+            className="md:hidden p-3 rounded-lg hover:bg-card transition-colors cursor-pointer"
             aria-label={open ? 'Close menu' : 'Open menu'}
             aria-expanded={open}
             aria-haspopup="dialog"
