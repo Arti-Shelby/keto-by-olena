@@ -87,8 +87,12 @@ Applied to all routes (`/(.*)`):
 - [x] TypeScript build passing (0 errors)
 - [x] Git repo + pushed to GitHub
 
+## What's Done (continued)
+- [x] Visual QA — Playwright screenshots at 375/768/1440px, all sections render correctly
+- [x] Fixed scroll animations: replaced `useInView + animate={inView?…}` with `whileInView` + `viewport` prop (was invisible in headless browsers and slow connections)
+- [x] Fixed Book "Buy Now" href — uses `BOOK.gumroadUrl` constant
+- [x] Security headers verified: all 6 headers present (X-Frame-Options, X-Content-Type-Options, Referrer-Policy, Permissions-Policy, HSTS, CSP)
+
 ## What's Next
-- [ ] Visual QA in browser (Playwright screenshots at 375px, 768px, 1440px)
-- [ ] Security audit verification (check headers in DevTools)
-- [ ] Deploy to Vercel (connect GitHub repo → auto-deploy)
+- [ ] Deploy to Vercel (connect GitHub repo → auto-deploy on https://vercel.com/new)
 - [ ] Verify live HTTPS URL + headers on securityheaders.com
