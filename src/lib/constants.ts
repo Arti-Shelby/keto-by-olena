@@ -2,8 +2,8 @@ export const CLIENT = {
   name: 'Olena Marchenko',
   brand: 'Keto by Olena',
   tagline: 'Transform Your Life, One Meal at a Time',
-  bio: 'I'm Olena — a keto coach, recipe developer, and the woman who lost 25 kg without ever feeling deprived. After 5 years of living keto across Kyiv and Berlin, I turned everything I learned into one beautifully practical guide.',
-  bioExtended: 'My approach is simple: real food, real flavours, no guilt. Every recipe in this book has been tested on my kitchen table and approved by my very honest family.',
+  bio: "I'm Olena — a keto coach, recipe developer, and the woman who lost 25 kg without ever feeling deprived. After 5 years of living keto across Kyiv and Berlin, I turned everything I learned into one beautifully practical guide.",
+  bioExtended: "My approach is simple: real food, real flavours, no guilt. Every recipe in this book has been tested on my kitchen table and approved by my very honest family.",
   email: 'hello@ketobylena.com',
   social: {
     instagram: 'https://instagram.com/',
@@ -48,7 +48,7 @@ export const TESTIMONIALS = [
     location: 'London',
     avatar: 'MT',
     rating: 5,
-    text: 'Finally a keto book that doesn't make me feel like I'm dieting. The weekly shopping lists saved me so much mental energy.',
+    text: "Finally a keto book that doesn't make me feel like I'm dieting. The weekly shopping lists saved me so much mental energy.",
   },
   {
     name: 'Daniel K.',
@@ -56,14 +56,14 @@ export const TESTIMONIALS = [
     location: 'Munich',
     avatar: 'DK',
     rating: 5,
-    text: 'Worth every penny. I've tried five other keto books — this is the only one I actually use. The emergency recipes alone are worth $27.',
+    text: "Worth every penny. I've tried five other keto books — this is the only one I actually use. The emergency recipes alone are worth $27.",
   },
 ]
 
 export const FAQ = [
   {
     q: 'What format is the book?',
-    a: 'It's a beautifully designed PDF, available for instant download right after purchase. Works on any device — phone, tablet, or laptop.',
+    a: "It's a beautifully designed PDF, available for instant download right after purchase. Works on any device — phone, tablet, or laptop.",
   },
   {
     q: 'Is it suitable for total beginners?',
@@ -74,8 +74,8 @@ export const FAQ = [
     a: 'Not at all. Every recipe uses ingredients you can find at any standard grocery store. No exotic superfoods, no specialty stores required.',
   },
   {
-    q: 'What if it doesn't work for me?',
-    a: 'I offer a 30-day, no-questions-asked money-back guarantee. If you're not happy with the book for any reason, just email me and I'll refund you in full.',
+    q: "What if it doesn't work for me?",
+    a: "I offer a 30-day, no-questions-asked money-back guarantee. If you're not happy with the book for any reason, just email me and I'll refund you in full.",
   },
 ]
 

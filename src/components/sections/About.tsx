@@ -3,10 +3,23 @@
 import { motion, useInView } from 'framer-motion'
 import { useRef } from 'react'
 import { CLIENT } from '@/lib/constants'
-import { Instagram, Youtube } from 'lucide-react'
+const InstagramIcon = () => (
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4" aria-hidden="true">
+    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+  </svg>
+)
+
+const YoutubeIcon = () => (
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4" aria-hidden="true">
+    <path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.95A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/>
+    <polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"/>
+  </svg>
+)
 
 const TikTokIcon = () => (
-  <svg viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5" aria-hidden="true">
+  <svg viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4" aria-hidden="true">
     <path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.95a8.16 8.16 0 004.77 1.52V7.01a4.85 4.85 0 01-1-.32z" />
   </svg>
 )
@@ -123,7 +136,7 @@ export default function About() {
                 className="p-2 rounded-full bg-background border border-border hover:border-accent hover:text-accent text-muted-fg transition-colors cursor-pointer"
                 aria-label="Instagram"
               >
-                <Instagram className="w-4 h-4" />
+                <InstagramIcon />
               </a>
               <a
                 href={CLIENT.social.youtube}
@@ -132,7 +145,7 @@ export default function About() {
                 className="p-2 rounded-full bg-background border border-border hover:border-accent hover:text-accent text-muted-fg transition-colors cursor-pointer"
                 aria-label="YouTube"
               >
-                <Youtube className="w-4 h-4" />
+                <YoutubeIcon />
               </a>
               <a
                 href={CLIENT.social.tiktok}

@@ -231,13 +231,15 @@ function IPadMockup() {
   )
 }
 
+const EASE: [number, number, number, number] = [0.22, 1, 0.36, 1]
+
 const LEAF_VARIANTS = {
   hidden: { opacity: 0, scale: 0.6, rotate: -20 },
   visible: (delay: number) => ({
     opacity: 1,
     scale: 1,
     rotate: 0,
-    transition: { duration: 0.9, delay, ease: [0.22, 1, 0.36, 1] },
+    transition: { duration: 0.9, delay, ease: EASE },
   }),
 }
 
@@ -246,7 +248,7 @@ const TEXT_VARIANTS = {
   visible: (delay: number) => ({
     opacity: 1,
     y: 0,
-    transition: { duration: 0.7, delay, ease: [0.22, 1, 0.36, 1] },
+    transition: { duration: 0.7, delay, ease: EASE },
   }),
 }
 
