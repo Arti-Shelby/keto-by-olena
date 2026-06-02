@@ -20,11 +20,12 @@ function FAQItem({
   index: number
 }) {
   return (
-    <motion.div
+    <motion.li
       initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: '-40px' }}
       transition={{ duration: 0.5, delay: index * 0.08, ease: [0.22, 1, 0.36, 1] }}
-      className="border border-border rounded-2xl overflow-hidden bg-background"
+      className="border border-border rounded-2xl overflow-hidden bg-background list-none"
     >
       <button
         onClick={onToggle}
@@ -62,7 +63,7 @@ function FAQItem({
           </motion.div>
         )}
       </AnimatePresence>
-    </motion.div>
+    </motion.li>
   )
 }
 
@@ -93,7 +94,7 @@ export default function FAQ() {
           </h2>
         </motion.div>
 
-        <div className="flex flex-col gap-3" role="list">
+        <ul className="flex flex-col gap-3">
           {FAQ_DATA.map((item, i) => (
             <FAQItem
               key={item.q}
@@ -104,7 +105,7 @@ export default function FAQ() {
               index={i}
             />
           ))}
-        </div>
+        </ul>
 
         {/* Still have questions */}
         <motion.div

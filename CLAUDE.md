@@ -93,6 +93,23 @@ Applied to all routes (`/(.*)`):
 - [x] Fixed Book "Buy Now" href — uses `BOOK.gumroadUrl` constant
 - [x] Security headers verified: all 6 headers present (X-Frame-Options, X-Content-Type-Options, Referrer-Policy, Permissions-Policy, HSTS, CSP)
 
+## What's Done (continued)
+- [x] Fixed mobile menu: moved overlay outside `<header>` (fragment), added AnimatePresence, resize→close, fixed ARIA pattern (aria-haspopup="dialog" + role="dialog" aria-modal)
+- [x] Fixed FAQ animation: FAQItem now uses `whileInView` (was `animate`), changed container to `<ul>/<li>` for correct ARIA semantics
+- [x] All CTA buttons (`Hero`, `Book`, `Navbar`, `Footer`) now point to `/buy` instead of `#buy`
+- [x] Added `/buy` checkout page (order summary + form + Stripe redirect)
+- [x] Added `/buy/success` thank-you page
+- [x] Added `/api/checkout` Stripe session creation route
+- [x] CSP tightened: removed unused `fonts.googleapis.com` / `fonts.gstatic.com`, added `form-action stripe.com`
+- [x] Installed `stripe` npm package
+
+## Buy Page / Stripe Setup
+1. Copy `.env.local.example` → `.env.local`
+2. Fill in `STRIPE_SECRET_KEY` from https://dashboard.stripe.com/apikeys
+3. Fill in `NEXT_PUBLIC_SITE_URL` (your Vercel URL)
+4. In Vercel dashboard → Settings → Environment Variables — add both vars
+
 ## What's Next
-- [ ] Deploy to Vercel (connect GitHub repo → auto-deploy on https://vercel.com/new)
+- [ ] Add Stripe keys to Vercel environment variables
 - [ ] Verify live HTTPS URL + headers on securityheaders.com
+- [ ] Update `CLIENT.social.*` URLs with real usernames (currently bare domain roots)

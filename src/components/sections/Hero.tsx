@@ -316,7 +316,7 @@ export default function Hero() {
               className="flex flex-wrap items-center gap-4 mb-8"
             >
               <a
-                href={BOOK.gumroadUrl}
+                href="/buy"
                 className="inline-flex items-center gap-2 bg-primary text-white font-semibold text-base px-8 py-4 rounded-full hover:bg-secondary transition-all duration-200 shadow-lg hover:shadow-xl hover:-translate-y-0.5 cursor-pointer"
               >
                 Get the Book — {BOOK.price}

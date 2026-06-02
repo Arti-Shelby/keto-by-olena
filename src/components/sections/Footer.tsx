@@ -74,7 +74,7 @@ export default function Footer() {
               Get started
             </h3>
             <a
-              href={BOOK.gumroadUrl}
+              href="/buy"
               className="inline-flex items-center justify-center gap-2 bg-accent text-primary font-semibold text-sm py-3 px-6 rounded-full hover:brightness-110 transition-all duration-200 w-fit cursor-pointer"
             >
               Get the Book — {BOOK.price}

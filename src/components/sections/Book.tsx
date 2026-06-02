@@ -194,8 +194,7 @@ export default function Book() {
               </div>
 
               <a
-                href={BOOK.gumroadUrl}
-                rel="noopener noreferrer"
+                href="/buy"
                 className="flex items-center justify-center gap-2 w-full bg-primary text-white font-semibold py-4 rounded-full hover:bg-secondary transition-all duration-200 shadow-lg hover:shadow-xl hover:-translate-y-0.5 cursor-pointer text-base"
               >
                 <Download className="w-4 h-4" aria-hidden="true" />
