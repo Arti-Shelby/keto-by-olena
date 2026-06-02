@@ -1,7 +1,6 @@
 'use client'
 
-import { motion, useInView } from 'framer-motion'
-import { useRef } from 'react'
+import { motion } from 'framer-motion'
 import { TESTIMONIALS } from '@/lib/constants'
 import { Star } from 'lucide-react'
 
@@ -22,16 +21,14 @@ function StarRating({ count }: { count: number }) {
 }
 
 export default function Testimonials() {
-  const ref = useRef<HTMLElement>(null)
-  const inView = useInView(ref, { once: true, margin: '-80px' })
-
   return (
-    <section id="reviews" ref={ref} className="py-20 lg:py-28 bg-card">
+    <section id="reviews" className="py-20 lg:py-28 bg-card">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
 
         <motion.div
           initial={{ opacity: 0, y: 24 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: '-80px' }}
           transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
           className="text-center mb-14"
         >
@@ -54,7 +51,8 @@ export default function Testimonials() {
             <motion.article
               key={t.name}
               initial={{ opacity: 0, y: 32 }}
-              animate={inView ? { opacity: 1, y: 0 } : {}}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: '-80px' }}
               transition={{
                 duration: 0.6,
                 delay: i * 0.12,
@@ -94,7 +92,8 @@ export default function Testimonials() {
         {/* Social proof banner */}
         <motion.div
           initial={{ opacity: 0, y: 16 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: '-80px' }}
           transition={{ duration: 0.6, delay: 0.5, ease: [0.22, 1, 0.36, 1] }}
           className="mt-10 text-center"
         >

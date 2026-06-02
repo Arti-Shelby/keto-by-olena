@@ -1,7 +1,7 @@
 'use client'
 
-import { motion, useInView, AnimatePresence } from 'framer-motion'
-import { useRef, useState } from 'react'
+import { motion, AnimatePresence } from 'framer-motion'
+import { useState } from 'react'
 import { FAQ as FAQ_DATA } from '@/lib/constants'
 import { Plus } from 'lucide-react'
 import { cn } from '@/lib/utils'
@@ -67,19 +67,18 @@ function FAQItem({
 }
 
 export default function FAQ() {
-  const ref = useRef<HTMLElement>(null)
-  const inView = useInView(ref, { once: true, margin: '-80px' })
   const [openIndex, setOpenIndex] = useState<number | null>(0)
 
   const toggle = (i: number) => setOpenIndex(openIndex === i ? null : i)
 
   return (
-    <section id="faq" ref={ref} className="py-20 lg:py-28">
+    <section id="faq" className="py-20 lg:py-28">
       <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
 
         <motion.div
           initial={{ opacity: 0, y: 24 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: '-80px' }}
           transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
           className="text-center mb-12"
         >
@@ -110,7 +109,8 @@ export default function FAQ() {
         {/* Still have questions */}
         <motion.div
           initial={{ opacity: 0 }}
-          animate={inView ? { opacity: 1 } : {}}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true, margin: '-80px' }}
           transition={{ duration: 0.6, delay: 0.5 }}
           className="mt-10 text-center"
         >
