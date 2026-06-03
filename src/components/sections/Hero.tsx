@@ -425,7 +425,7 @@ export default function Hero() {
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1, transition: { delay: 1.2, duration: 0.5 } }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 hidden lg:flex flex-col items-center gap-2"
         aria-hidden="true"
       >
         <span className="text-xs text-muted-fg tracking-widest uppercase">Scroll</span>
